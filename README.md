@@ -13,6 +13,6 @@ _italics_ and __bold__
 1. __first item but in bold__
  1. *another item but in italics*
 
-[link] (https://www.google.com)
+[https://www.google.com] (link)
 
 
