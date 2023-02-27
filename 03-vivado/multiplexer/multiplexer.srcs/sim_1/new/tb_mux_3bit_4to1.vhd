@@ -1,49 +1,47 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/21/2023 02:22:48 PM
--- Design Name: 
--- Module Name: tb_mux_3bit_4to1 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
 
+entity tb_mux_3bit_4to1 is 
+end entity tb_mux_3bit_4to1;
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
-entity tb_mux_3bit_4to1 is
---  Port ( );
-end tb_mux_3bit_4to1;
-       signal a      : std_logic;
-       signal b      : std_logic;
-       signal c      : std_logic;
-       signal d      : std_logic;
-       signal addr   : std_logic_vector(3 downto 0);
-       signal en     : std_logic;
-       y_o      : out std_logic 
-architecture Behavioral of tb_mux_3bit_4to1 is
-
+architecture testbench of tb_mux_3bit_4to1 is
+    signal sel  :   std_logic_vector(2 - 1 downto 0);
+    signal a    :   std_logic_vector(3 - 1 downto 0);
+    signal b    :   std_logic_vector(3 - 1 downto 0);
+    signal c    :   std_logic_vector(3 - 1 downto 0);
+    signal d    :   std_logic_vector(3 - 1 downto 0);
+    signal y    :   std_logic_vector(3 - 1 downto 0);
+    
 begin
 
+	uut_gates : entity work.mux_3bit_4to1
+        port map(
+            a_i      => a,
+            b_i      => b,
+            c_i      => c,
+            d_i      => d,
+            y_o      => y,
+            sel_i    => sel
 
-end Behavioral;
+        );
+
+	p_stimulus : process
+        begin
+
+        a   <= "000";
+        b   <= "001";
+        c   <= "010";
+        d   <= "011";
+        sel <= "00";
+        wait for 100 ns;
+        sel <= "01";
+        wait for 100 ns;
+        sel <= "10";
+        wait for 100 ns;
+        sel <= "11";
+        wait for 100 ns;
+        report "Stimulus process finished" severity note;
+        wait;
+	end process p_stimulus;
+
+end architecture testbench;
