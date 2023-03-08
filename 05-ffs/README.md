@@ -27,7 +27,7 @@ begin
                 sig_q <= sig_q;
             elsif (j = '1') and (k = '0') then
             	sig_q <= '1';
-			   elsif (j = '0') and (k = '1') then
+	    elsif (j = '0') and (k = '1') then
             	sig_q <= '0'; 
             else   
                 sig_q <= not sig_q;
