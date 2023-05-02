@@ -1,4 +1,4 @@
-# YOUR_PROJECT_TITLE
+# UART stopky
 
 ### Team members
 
