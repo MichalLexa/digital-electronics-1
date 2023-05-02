@@ -20,7 +20,7 @@ Jako hardware desku používáme Nexys A7-50T. K zobrazení času používáme 6
 
 #### Hlavní komponenty:
 
-[top.vhdl](project/projekt/sources_1/new/top.vhd) - propojení všech komponentů
+[top.vhdl](https://github.com/SoudruhRomanCZ/DigitalElectronics1/blob/main/project/projekt/projekt.srcs/sources_1/new/top.vhd) - propojení všech komponentů
 
 [UART-receiver](project/projekt/sources_1/new/receiver.vhd)
 https://www.edaplayground.com/x/mKEV - simulace UART-receiveru
@@ -35,11 +35,11 @@ https://www.edaplayground.com/x/TS9m -simulace UART-transmitteru
 
 #### Vedlejší komponenty:
 
-[Clock_enabled](project/projekt/sources_1/new/clock_enabled.vhd)
+[Clock_enabled]([project/projekt/sources_1/new/clock_enabled.vhd](https://github.com/SoudruhRomanCZ/DigitalElectronics1/blob/main/project/projekt/projekt.srcs/sources_1/new/clock_enable.vhd))
 
-[Counter](project/projekt/sources_1/new/cnt_up_down.vhd)
+[Counter](https://github.com/SoudruhRomanCZ/DigitalElectronics1/blob/main/project/projekt/projekt.srcs/sources_1/new/cnt_up_down.vhd)
 
-[7-segmentový driver](project/projekt/sources_1/new/hex_7seg.vhd)
+[7-segmentový driver](https://github.com/SoudruhRomanCZ/DigitalElectronics1/blob/main/project/projekt/projekt.srcs/sources_1/new/hex_7seg.vhd)
 
 ## Instructions
 
