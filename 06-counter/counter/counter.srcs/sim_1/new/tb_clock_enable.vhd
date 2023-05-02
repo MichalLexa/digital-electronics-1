@@ -42,8 +42,8 @@ begin
   uut_ce : entity work.clock_enable
     generic map (
       g_MAX => c_MAX
-    ) -- Note that there is NO comma or semicolon between
-      -- generic map section and port map section
+    )-- Note that there is NO comma or semicolon between
+     -- generic map section and port map section
     port map (
       clk => sig_clk_100mhz,
       rst => sig_rst,
@@ -64,6 +64,7 @@ begin
       wait for c_CLK_100MHZ_PERIOD / 2;
 
     end loop;
+
     wait;                               -- Process is suspended forever
 
   end process p_clk_gen;

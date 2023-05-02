@@ -18,7 +18,7 @@ library ieee;
 ------------------------------------------------------------
 
 entity tb_cnt_up_down is
-  -- Entity of testbench is always empty
+-- Entity of testbench is always empty
 end entity tb_cnt_up_down;
 
 ------------------------------------------------------------
@@ -28,15 +28,15 @@ end entity tb_cnt_up_down;
 architecture testbench of tb_cnt_up_down is
 
   -- Number of bits for testbench counter
-  constant c_CNT_WIDTH         : natural := 5;
-  constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
+  constant c_cnt_width         : natural := 5;
+  constant c_clk_100mhz_period : time    := 10 ns;
 
   -- Local signals
   signal sig_clk_100mhz : std_logic;
   signal sig_rst        : std_logic;
   signal sig_en         : std_logic;
   signal sig_cnt_up     : std_logic;
-  signal sig_cnt        : std_logic_vector(c_CNT_WIDTH - 1 downto 0);
+  signal sig_cnt        : std_logic_vector(c_cnt_width - 1 downto 0);
 
 begin
 
@@ -44,7 +44,7 @@ begin
   -- (Unit Under Test)
   uut_cnt : entity work.cnt_up_down
     generic map (
-      g_CNT_WIDTH => c_CNT_WIDTH
+      g_cnt_width => c_cnt_width
     )
     port map (
       clk    => sig_clk_100mhz,
@@ -63,11 +63,12 @@ begin
     while now < 750 ns loop             -- 75 periods of 100MHz clock
 
       sig_clk_100mhz <= '0';
-      wait for c_CLK_100MHZ_PERIOD / 2;
+      wait for c_clk_100mhz_period / 2;
       sig_clk_100mhz <= '1';
-      wait for c_CLK_100MHZ_PERIOD / 2;
+      wait for c_clk_100mhz_period / 2;
 
     end loop;
+
     wait;                               -- Process is suspended forever
 
   end process p_clk_gen;

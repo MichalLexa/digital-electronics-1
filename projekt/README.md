@@ -2,51 +2,21 @@
 
 ### Team members
 
-* Member 1 (responsible for xxx)
-* Member 2 (responsible for xxx)
-* Member 3 (responsible for xxx)
+* Michal Lexa 
+* Roman Křivánek 
+* Erik Maděránek 
 
-### Table of contents
+Theoretical description and explanation
+* UART stands for Universal Asynchronous Receiver/Transmitter. It is a type of hardware interface used for serial communication between two devices. It allows for the transmission and reception of data in a serial format, and is commonly used in microcontrollers, embedded systems, and other electronic devices for communication with other devices or systems. UART uses two data lines, one for transmitting data (TX) and one for receiving data (RX), as well as a common ground reference.
 
-* [Project objectives](#objectives)
-* [Hardware description](#hardware)
-* [VHDL modules description and simulations](#modules)
-* [TOP module description and simulations](#top)
-* [Video](#video)
-* [References](#references)
+Hardware description of demo application
+Insert descriptive text and schematic(s) of your implementation.
 
-<a name="objectives"></a>
+Software description
+Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in src and sim folders.
 
-## Project objectives
+Component(s) simulation
+Write descriptive text and simulation screenshots of your components.
 
-Write your text here.
-
-<a name="hardware"></a>
-
-## Hardware description
-
-Write your text here.
-
-<a name="modules"></a>
-
-## VHDL modules description and simulations
-
-Write your text here.
-
-<a name="top"></a>
-
-## TOP module description and simulations
-
-Write your text here.
-
-<a name="video"></a>
-
-## Video
-
-Write your text here
-
-<a name="references"></a>
-
-## References
-
-1. Write your text here.
+Instructions
+Write an instruction manual for your application, including photos or a link to a video.

@@ -83,10 +83,10 @@ begin
   clk_en0 : entity work.clock_enable
     generic map (
       -- FOR SIMULATION, KEEP THIS VALUE TO 4
-      -- FOR IMPLEMENTATION, CHANGE THIS VALUE TO 400,000
+      -- FOR IMPLEMENTATION, CHANGE THIS VALcoUE TO 400,000
       -- 4      @ 4 ns
       -- 400000 @ 4 ms
-      g_MAX => 400000
+      g_max => 400000
     )
     port map (
       clk => clk,
@@ -100,14 +100,14 @@ begin
   --------------------------------------------------------
   bin_cnt0 : entity work.cnt_up_down
     generic map (
-      g_CNT_WIDTH => 2-- WRITE YOUR CODE HERE
+      g_cnt_width => 2
     )
     port map (
-      clk => clk,
-      rst => rst,
-      en => sig_en_4ms,
+      clk    => clk,
+      rst    => rst,
+      en     => sig_en_4ms,
       cnt_up => '0',
-      cnt => sig_cnt_2bit  -- WRITE YOUR CODE HERE
+      cnt    => sig_cnt_2bit
     );
 
   --------------------------------------------------------
@@ -140,27 +140,31 @@ begin
         case sig_cnt_2bit is
 
           when "11" =>
+
             sig_hex <= data3;
             dp      <= dp_vect(3);
             dig     <= "0111";
 
           when "10" =>
-           sig_hex <= data2;
-           dp      <= dp_vect(2);
-           dig     <= "1011";
- -- DEFINE ALL OUTPUTS FOR "10" HERE
+
+            sig_hex <= data2;
+            dp      <= dp_vect(2);
+            dig     <= "1011";
+          -- DEFINE ALL OUTPUTS FOR "10" HERE
 
           when "01" =>
-           sig_hex <= data1;
-           dp      <= dp_vect(1);
-           dig     <= "1101";
- -- DEFINE ALL OUTPUTS FOR "01" HERE
+
+            sig_hex <= data1;
+            dp      <= dp_vect(1);
+            dig     <= "1101";
+          -- DEFINE ALL OUTPUTS FOR "01" HERE
 
           when others =>
-           sig_hex <= data0;
-           dp      <= dp_vect(0);
-           dig     <= "1110";
- -- DEFINE ALL OUTPUTS FOR "00" HERE
+
+            sig_hex <= data0;
+            dp      <= dp_vect(0);
+            dig     <= "1110";
+        -- DEFINE ALL OUTPUTS FOR "00" HERE
 
         end case;
 

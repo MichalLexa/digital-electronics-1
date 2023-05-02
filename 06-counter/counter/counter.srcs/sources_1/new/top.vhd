@@ -1,21 +1,22 @@
+-- vsg_off
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 03/14/2023 02:00:59 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: top - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -32,17 +33,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top is
-    Port ( CLK100MHZ : in STD_LOGIC;
-           SW : in STD_LOGIC;
-           CA : out STD_LOGIC;
-           CB : out STD_LOGIC;
-           CC : out STD_LOGIC;
-           CD : out STD_LOGIC;
-           CE : out STD_LOGIC;
-           CF : out STD_LOGIC;
-           CG : out STD_LOGIC;
-           AN : out STD_LOGIC_VECTOR (7 downto 0);
-           BTNC : in STD_LOGIC);
+    Port ( CLK100MHZ : in std_logic;
+           SW : in std_logic;
+           CA : out std_logic;
+           CB : out std_logic;
+           CC : out std_logic;
+           CD : out std_logic;
+           CE : out std_logic;
+           CF : out std_logic;
+           CG : out std_logic;
+           AN : out std_logic_vector (7 downto 0);
+           BTNC : in std_logic);
 end top;
 
 ------------------------------------------------------------------------
