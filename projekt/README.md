@@ -35,7 +35,7 @@ https://www.edaplayground.com/x/TS9m -simulace UART-transmitteru
 
 #### Vedlejší komponenty:
 
-[Clock_enabled]((https://github.com/SoudruhRomanCZ/DigitalElectronics1/blob/main/project/projekt/projekt.srcs/sources_1/new/clock_enable.vhd))
+[Clock_enabled](https://github.com/SoudruhRomanCZ/DigitalElectronics1/blob/main/project/projekt/projekt.srcs/sources_1/new/clock_enable.vhd)
 
 [Counter](https://github.com/SoudruhRomanCZ/DigitalElectronics1/blob/main/project/projekt/projekt.srcs/sources_1/new/cnt_up_down.vhd)
 
